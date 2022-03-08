@@ -1,0 +1,193 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@400;500;700&display=swap');
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+   font-size: 62.5%;
+   box-sizing: border-box;
+   font-family: 'Sansita Swashed', cursive;
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: inherit;
+}
+
+:root {
+   /*========== Colors ==========*/
+   --first-color: #fefefe;
+   --border-color: #f8fafc;
+   --title-color: #ffffff;
+   --text-color: #ffffff;
+   --text-color-light: #ffffff;
+   --body-color: #0f172a;
+   --container-color: #ffffff;
+
+   /*========== Font and typography ==========*/
+   --header-height: 5.6rem;
+
+   --body-font: 'Roboto', sans-serif;
+   --biggest-font-size: 3.6rem;
+   --h1-font-size: 2.4rem;
+   --h2-font-size: 2rem;
+   --h3-font-size: 1.6rem;
+   --normal-font-size: 1.5rem;
+   --small-font-size: 1.3rem;
+   --smaller-font-size: 1.2rem;
+
+   /*========== Font weight ==========*/
+   --font-thin: 100;
+   --font-light: 300;
+   --font-regular: 400;
+   --font-medium: 500;
+   --font-semi-bold: 600;
+   --font-bold: 700;
+   --font-black: 900;
+
+   /*========== z index ==========*/
+   --z-tooltip: 10;
+   --z-fixed: 100;
+
+   @media (min-width: 768px) {
+      /*========== Font and typography ==========*/
+      --biggest-font-size: 5.6rem;
+      --h1-font-size: 3.6rem;
+      --h2-font-size: 2.4rem;
+      --h3-font-size: 2rem;
+      --normal-font-size: 1.6rem;
+      --small-font-size: 1.4rem;
+      --smaller-font-size: 1.3rem;
+   }
+}
+
+* {
+   padding: 0;
+   margin: 0;
+}
+
+body {
+   /*For animation dark mode*/
+   transition: 0.4s;
+}
+
+.toolbar {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.toolbar__button {
+   padding: 1rem 2rem;
+   margin: 5rem;
+   border: none;
+   background-color: #0ea5e9;
+   color: var(--text-color);
+   border-radius: 0.5rem;
+   cursor: pointer;
+   transition: 0.2s;
+}
+
+.toolbar__button:hover {
+   background-color: #1495d1;
+}
+
+.dark {
+   background-color: #0f172a;
+}
+
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.gameboy {
+   border: 2rem solid #000000;
+   border-radius: 2rem;
+}
+
+.header {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background: repeating-radial-gradient(
+         circle at 100% 100%,
+         rgba(255, 190, 11, 0.5) 4%,
+         rgba(255, 190, 11, 0.5) 8%,
+         rgba(251, 86, 7, 0.5) 8%,
+         rgba(251, 86, 7, 0.5) 12%,
+         rgba(255, 0, 110, 0.5) 12%,
+         rgba(255, 0, 110, 0.5) 16%,
+         rgba(131, 56, 236, 0.5) 16%,
+         rgba(131, 56, 236, 0.8) 20%,
+         rgba(58, 134, 255, 0.5) 20%,
+         rgba(58, 134, 255, 0.5) 24%
+      ),
+      repeating-radial-gradient(
+         circle at 0% 100%,
+         rgba(255, 190, 11, 0.7) 4%,
+         rgba(255, 190, 11, 0.9) 8%,
+         rgba(251, 86, 7, 0.7) 8%,
+         rgba(251, 86, 7, 0.9) 12%,
+         rgba(255, 0, 110, 0.7) 12%,
+         rgba(255, 0, 110, 0.9) 16%,
+         rgba(131, 56, 236, 0.8) 16%,
+         rgba(131, 56, 236, 0.8) 20%,
+         rgba(58, 134, 255, 0.8) 20%,
+         rgba(58, 134, 255, 0.8) 24%
+      );
+   background-size: 250px 250px;
+   background-position: 0 0;
+   -webkit-animation: stripes 3s linear infinite;
+   animation: stripes 3s linear infinite;
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
+}
+
+@media only screen and (max-width: 900px) {
+   html {
+      font-size: 10px;
+   }
+}
+
+@media only screen and (max-width: 500px) {
+   html {
+      font-size: 6px;
+   }
+}
+
+@-webkit-keyframes stripes {
+   100% {
+      background-position: 250px 0, 250px 0, 100px 0;
+   }
+}
+
+@keyframes stripes {
+   100% {
+      background-position: 250px 0, 250px 0, 100px 0;
+   }
+}
+
+.header__title {
+   margin: 4rem 0;
+   font-size: var(--biggest-font-size);
+}
+
+.members {
+   margin: 2rem;
+}
+
+.members__container {
+   padding-left: 5rem;
+}
+
+.members__title,
+.members__item {
+   font-size: var(--h2-font-size);
+   color: #38bdf8;
+}
